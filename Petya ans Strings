@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string a,b;
+    cin>>a;
+    cin>>b;
+ int n=a.length();
+ int m=n;
+ int i=0;
+ while(n--)
+{
+    a[i]=tolower(a[i]);
+    b[i]=tolower(b[i]);
+    if(a[i]==b[i])
+    {
+        i++;
+         continue;
+    }
+   else if(a[i]>b[i])
+   {
+       cout<<"1";
+       break;
+   }
+   else 
+   {
+       cout<<"-1";
+       break;
+   }
+}
+if(i==m) cout<<"0";
+return 0;
+}
