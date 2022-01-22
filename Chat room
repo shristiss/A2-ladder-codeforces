@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    string s,ans="hello";
+    cin>>s;
+    int i=0,j=0;
+    while(i<s.length() && j<ans.length())
+    {
+        if(s[i]==ans[j]) 
+        {
+            i++;
+            j++;
+        }
+        else i++;
+    }
+    if(j==ans.length()) cout<<"YES";
+    else cout<<"NO";
+}
