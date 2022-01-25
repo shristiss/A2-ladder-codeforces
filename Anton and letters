@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+   getline(cin,s);
+    set<char>us;
+    for(int i=0;i<s.size();i++)
+    {
+        if(s[i]>='a' && s[i]<='z')
+        us.insert(s[i]);
+    }
+    cout<<us.size()<<endl;
+    return 0;
+    
+}
