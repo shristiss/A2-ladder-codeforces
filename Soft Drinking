@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,l,c,d,p,nl,np,ans=0;
+    cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+    int totaldrinktoast=0;
+    int totalslice=0,totalsalt=0;
+    totaldrinktoast=(k*l)/nl;
+    totalslice=c*d;
+    totalsalt=p/np;
+     ans=min({totaldrinktoast,totalslice,totalsalt});
+     cout<<ans/n;
+    return 0;
+}
