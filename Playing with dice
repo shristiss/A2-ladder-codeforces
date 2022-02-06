@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int counta=0,countb=0,draw=0;
+    for(int i=1;i<=6;i++)
+    {
+        int x=abs(a-i);
+        int y=abs(b-i);
+        if(x<y) counta++;
+        else if(y<x) countb++;
+        else draw++;
+    }
+    cout<<counta<<" "<<draw<<" "<<countb;
+    return 0;
+}
