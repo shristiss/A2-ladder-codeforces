@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,m,a,b,val1=0,val2=0,val3=0,ans=0;
+    cin>>n>>m>>a>>b;
+    int r=n,s=n;
+    while(r--)
+    {
+        val1+=a;
+    }
+    while(n>0)
+    {
+        val2+=b;
+        n-=m;
+    }
+    while(s)
+    {
+        if(s>m)
+        {
+            val3+=b;
+            s-=m;
+        }
+        else{
+            val3+=a;
+            s-=1;
+        }
+    }
+    ans=min({val1,val2,val3});
+    cout<<ans<<endl;
+    return 0;
+}
