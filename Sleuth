@@ -1,0 +1,22 @@
+#include <cstdio>
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    char current;
+    string s;
+    getline(cin,s);
+   for(int k=s.length()-1;k>=0;k--)
+   { 
+       if((s[k]>='a' && s[k]<='z') || (s[k]>='A' && s[k]<='Z'))
+        current=tolower(s[k]);
+       else continue;
+       if(current == 'a' || current == 'e' || current == 'i' || current == 'o' || current == 'u' || current == 'y')
+       cout<<"YES"<<endl;
+       else cout<<"NO"<<endl;
+       break;
+   }
+    
+    return 0;
+}
