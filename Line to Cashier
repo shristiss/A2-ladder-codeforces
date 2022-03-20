@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int shop,num,x,ans=INT_MAX,sum;
+    cin>>shop;
+   
+    int arr[shop];
+    for(int i=0;i<shop;i++)cin>>arr[i];
+    for(int i=0;i<shop;i++)
+    {
+         sum=0;
+        
+        for(int j=0;j<arr[i];j++)
+        {
+            cin>>x;
+            sum+=x*5;
+            
+        }
+        sum+=arr[i]*15;
+        ans=min(ans,sum);
+    }
+    cout<<ans<<endl;
+}
