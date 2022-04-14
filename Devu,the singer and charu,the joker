@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,d,t;
+    cin>>n>>d;
+    int count=0,jokes=0;
+    for(int i=0;i<n;i++)
+    {
+        cin>>t;
+        count+=t;
+        if(i<n-1)
+        {
+            jokes+=2;
+            count+=10;
+        }
+        else{
+            jokes+=(d-count)/5;
+        }
+    }
+    if(count<=d)cout<<jokes<<endl;
+    else cout<<-1;
+}
