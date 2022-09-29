@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll  long long int
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int num;
+        cin>>num;
+        vector<int>a;
+        for(int i=0;i<num;i++)
+        {
+            int x;
+            cin>>x;
+            a.push_back(x); // 1 2 3
+        }
+        sort(a.begin(),a.end());
+    ll ans=LLONG_MAX;
+        for(int i=1;i<=num-2;i++){
+            if(a[i-1]==a[i] and a[i]==a[i+1]){
+                ans=0;
+                break;
+            }
+            if(a[i-1]==a[i]){
+                ans=min(ans,(ll)a[i+1]-a[i]);
+            }
+            else if(a[i+1]==a[i]){
+                ans=min(ans,(ll)a[i]-a[i-1]);
+            }
+            else{
+                ans=min(ans,(ll)(a[i]-a[i-1])+(a[i+1]-a[i]));
+            }
+        }
+        cout<<ans<<endl;
+    }
+}
